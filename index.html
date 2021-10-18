@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assest/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="container">
+            <header class="header">
+                <h2 class="header-title">Todo List</h2>
+            </header>
+            <div class="main-content">
+
+                <div class="content-col work">
+
+                        <select name="" id="" class="filter-option">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="uncompleted">Uncompleted</option>
+                        </select>
+    
+                    <div class="todo-list"></div>
+                    <div class="done-task">
+                        <span>Done</span>
+                    </div>
+                    <div class="group-details">
+                        <div class="completed-range">
+                            <p>completed &MediumSpace; <span class="completed-num">1</span> / <span class="todos-num"></span></p>
+                            <div class="range-box">
+                                <div class="range"></div>
+                            </div>
+                        </div>
+                        <button class="modal-button">
+                            <span class="modal-icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                            <p>Add task</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="task-modal">
+                <form class="modal-form">
+                    <label for="task-name">
+                        <p class="form-title">Title</p>
+                        <input type="text" name="" class="task-name" id="task-name">
+                    </label>
+                    <label for="describe">
+                        <p class="form-title">Describe</p>
+                        <input type="text" name="" class="describe-Input" id="describe">
+                    </label>
+                    <div class="form-time">
+                        <label for="start-time">
+                            <p class="form-title">Start</p>
+                            <input type="time" name="" class="start-time" id="start-time">
+                        </label>
+                        <label for="end-time">
+                            <p class="form-title">End</p>
+                            <input type="time" name="" class="end-time" id="end-time">
+                        </label>
+                    </div>
+
+                        <div class="category-form-select">
+                            <button class="categorymodal-button">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <select name="" id="" class="categories">
+
+                                <option value="" disabled selected>choose or make category</option>
+                            </select>
+                            <span class="preview-color"></span>
+                        </div>
+
+
+
+                    <button type="submit" class="add-task">Add task</button>
+                </form>
+                <button class="close-modal">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="category-modal">
+                <form action="" class="cat-form">
+                    <label for="catrgory-name">
+                        <!-- <span class="form-title">category</span> -->
+                        <input type="text" name="" id="catrgory-name" class="catrgory-name"placeholder="category name">
+                    </label>
+                    <label for="category-color">
+                        <input type="color" name="" class="category-color" id="category-color" >
+                        <span class="form-title">color</span>
+                    </label>
+                    <button type="submit" class="add-category">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Category</span>
+                    </button>
+                </form>
+                <button class="close-category-modal">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
