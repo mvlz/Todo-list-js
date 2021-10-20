@@ -319,7 +319,7 @@ function getLocalCategories() {
         filterOptionChild.value = cat.catName;
         filterOptionChild.innerText = cat.catName;
         filterOption.appendChild(filterOptionChild);
-        categoryInputcolor.value = "#673AB7";
+        // categoryInputcolor.value = "#673AB7";
 
 
     });
@@ -339,4 +339,24 @@ function localTodosSetColor() {
     });
 
     localStorage.setItem("todos", JSON.stringify(savedTodos));
+}
+
+
+const randomColorBtn = document.querySelector(".random-color");
+
+randomColorBtn.addEventListener("click",(e)=> {
+    e.preventDefault();
+    setRandomColor();
+});
+
+function getRandomColor(){
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i < 6; i++){
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+function setRandomColor(){
+    categoryInputcolor.value = getRandomColor();
 }

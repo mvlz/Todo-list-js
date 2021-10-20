@@ -58,7 +58,7 @@ body {
 
 .header {
     width: 100%;
-    height: 10vh;
+    height: 4rem;
 }
 
 .header-title {
@@ -77,7 +77,7 @@ body {
 
 .main-content {
     width: 100%;
-    height: 90%;
+    height: calc(100% - 4rem);
     display: flex;
     /* justify-content: space-between; */
     justify-content: center;
@@ -166,12 +166,12 @@ body {
     left: -1rem;
     top: -0.35rem;
     border-radius: 5px;
-    transition: all ease-in 0.2;
 }
 
 .check::before {
     background-color: var(--primary);
 }
+
 .check::after {
     content: "\f00c";
     font-family: "Font Awesome 5 Pro";
@@ -362,33 +362,6 @@ button.add-task {
     background-color: #412572;
 }
 
-.done-task {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    color: #9fa3a8;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    display: none;
-}
-
-.done-task::before,
-.done-task::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
-    width: 40%;
-    border-bottom: 2px dashed #9fa3a8;
-    z-index: 2;
-}
-
-.done-task::after {
-    left: auto;
-    right: 0;
-}
 
 select.filter-option {
     width: 20rem;
@@ -479,7 +452,8 @@ select.filter-option {
 
 .cat-form,
 .cat-form label,
-.category-form-select {
+.category-form-select,
+.category-color-div {
     display: flex;
     align-items: center;
     width: 100%;
@@ -510,8 +484,8 @@ select.filter-option {
 }
 
 input.category-color {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border: none;
 }
 
@@ -522,6 +496,18 @@ input.category-color::-webkit-color-swatch-wrapper {
 input.category-color::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
+}
+
+.random-color {
+    background: white;
+    padding: 0.3rem 0.7rem;
+    width: 11rem;
+    border-radius: 12px 12px 3px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: segoe ui;
+    background-image: linear-gradient(45deg, rgb(255 0 0 / 65%), rgb(255 165 0 / 65%), rgb(255 255 0 / 65%), rgb(0 128 0 / 65%), rgb(0 0 255 / 65%), rgb(75 0 130 / 65%), rgb(238 130 238 / 65%));
+
 }
 
 .categorymodal-button {
@@ -538,10 +524,15 @@ input.category-color::-webkit-color-swatch {
 }
 
 @media screen and (max-width: 430px) {
-    select.filter-option {
+    select.filter-option ,.group-details {
         width: 93%;
     }
-
+    .group-details{
+        order: -1;
+    }
+    .group-details::before{
+        content: none;
+    }
     .todo,
     .task-modal {
         width: 80%;

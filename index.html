@@ -21,19 +21,17 @@
 
                 <div class="content-col work">
 
-                        <select name="" id="" class="filter-option">
-                            <option value="all">All</option>
-                            <option value="completed">Completed</option>
-                            <option value="uncompleted">Uncompleted</option>
-                        </select>
-    
+                    <select name="" id="" class="filter-option">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+
                     <div class="todo-list"></div>
-                    <div class="done-task">
-                        <span>Done</span>
-                    </div>
                     <div class="group-details">
                         <div class="completed-range">
-                            <p>completed &MediumSpace; <span class="completed-num">1</span> / <span class="todos-num"></span></p>
+                            <p>completed &MediumSpace; <span class="completed-num">1</span> / <span
+                                    class="todos-num"></span></p>
                             <div class="range-box">
                                 <div class="range"></div>
                             </div>
@@ -69,16 +67,16 @@
                         </label>
                     </div>
 
-                        <div class="category-form-select">
-                            <button class="categorymodal-button">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <select name="" id="" class="categories">
+                    <div class="category-form-select">
+                        <button class="categorymodal-button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <select name="" id="" class="categories">
 
-                                <option value="" disabled selected>choose or make category</option>
-                            </select>
-                            <span class="preview-color"></span>
-                        </div>
+                            <option value="" disabled selected>choose or make category</option>
+                        </select>
+                        <span class="preview-color"></span>
+                    </div>
 
 
 
@@ -92,12 +90,15 @@
                 <form action="" class="cat-form">
                     <label for="catrgory-name">
                         <!-- <span class="form-title">category</span> -->
-                        <input type="text" name="" id="catrgory-name" class="catrgory-name"placeholder="category name">
+                        <input type="text" name="" id="catrgory-name" class="catrgory-name" placeholder="category name">
                     </label>
-                    <label for="category-color">
-                        <input type="color" name="" class="category-color" id="category-color" >
-                        <span class="form-title">color</span>
-                    </label>
+                    <div class="category-color-div">
+                        <label for="category-color">
+                            <input type="color" name="" class="category-color" id="category-color">
+                            <span class="form-title">color</span>
+                        </label>
+                        <button class="random-color">Random color</button>
+                    </div>
                     <button type="submit" class="add-category">
                         <i class="fas fa-plus"></i>
                         <span>Add Category</span>
