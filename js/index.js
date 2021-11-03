@@ -113,6 +113,7 @@ function checkRemove(e) {
         todo.remove();
         removeLocalTodos(todo);
         setRangeTodo();
+        launch_toast() 
     } else if (classList[0] === "check-task") {
         const todo = item.parentElement;
 
@@ -359,4 +360,10 @@ function getRandomColor(){
 }
 function setRandomColor(){
     categoryInputcolor.value = getRandomColor();
+}
+
+function launch_toast() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000);
 }

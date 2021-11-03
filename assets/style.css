@@ -560,3 +560,54 @@ input.category-color::-webkit-color-swatch {
         flex-direction: column;
     }
 }
+
+#snackbar {
+    visibility: hidden;
+    min-width: 12rem;
+    background-color: #d4d4d4;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 13px;
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    bottom: 5.5rem;
+    font-size: 14px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #snackbar::before {
+    content: "\f1f8";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    margin-right: 0.5rem;
+  }
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 5.5rem; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 5.5rem; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 5.5rem; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 5.5rem; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
